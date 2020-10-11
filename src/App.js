@@ -129,14 +129,22 @@ class App extends React.Component {
   
   changeColor(){
     const newVal = document.getElementById("island-ta").value;
-    const vals = newVal.split('\n');
+    const vals = newVal.split(/\s+/);
 
     if (vals.length === 0 || isNaN(vals[0])){
+      this.setState({
+        ...this.state,
+        helpVisible: true,
+      });
       return;
     } 
 
     let rowNum = +vals[0];
     if (rowNum === 0 || vals.length === 1){
+      this.setState({
+        ...this.state,
+        helpVisible: true,
+      });
       return;
     }
 
