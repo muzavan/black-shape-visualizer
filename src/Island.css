@@ -1,5 +1,5 @@
 .IslandBox{
-    border: 3px solid #999;
+    border: 2px solid #111111;
     font-size: 24px;
     font-weight: bold;
     line-height: 34px;
@@ -11,5 +11,6 @@
 }
 
 .Island{
-    text-align: center;
+    display: table;
+    margin: 1em auto;
 }

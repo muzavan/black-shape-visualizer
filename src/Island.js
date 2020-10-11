@@ -1,18 +1,20 @@
 import React from 'react';
 import './Island.css';
 
-const blankColor = "#ffffff";
-const oddColor = "#ff0000";
-const evenColor = "#00ff00";
-const textColor = "#0000ff";
+const blankColor = "#f2f2f2";
+const modColor = {
+  0: "#e29bf4",
+  1: "#ffa351",
+  2: "#81de76",
+}
+
+const textColor = "#111111";
 
 function IslandBox(props){
-  let bgColor = evenColor;
+  let bgColor = blankColor;
 
-  if (props.box === 0) {
-    bgColor = blankColor;
-  } else if (props.box % 2 === 1){
-    bgColor = oddColor;
+  if (props.box !== 0) {
+    bgColor = modColor[props.box % 3];
   }
 
   const style = {
